@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade15/02/23</title>
+<style>
+body {
+  background-color: blueviolet;
+}
+
+.img1 {
+  background-color: blueviolet;
+}
+
+
+</style>
+<title>Atividade tema 3 e 4</title>
 </head>
 <body>
-   <h1> Topologia de Rede</h1> 
-<h2>Topologia</h2>
-<p>A topoloia é um sistema que demonstra como os hosts estão conectados a rede, destacando a estrutura da rede, e é mostrado tanto fisicamente ou logicamente.</p>
-<img src="o.jpg">
-<p> Existe dois tipos de topologia de rede, a logica e a fisica.
-    A topologia Fisica mostra como os hosts estão dispostos e conectados no ambiente fisco. Seguindo um Layout Fisico como a posição de cada host, a forma que os cabos estão conectados, nos mostrando toda a topologia de rede, que o objetivo é auxiliar em varios pontos critics, como a maleabilidade, velocidade na transferencia dos dados e segurança.  </p>
-    <p>A topologia logica é um pouco diferente, ela demonstra a forma como os daods são transmitidos na rede, ou a dorma que os dadso passm de um host para outro, sem se preocupar com a conexão fisica dos hosts, a forma como os dados são transmitidos na rede podem ser controladas por switches e roteadores</p>
-    <p>Beneficios e desvantagens de cada topologia:Barramento. Os hosts estão conectados no mesmo meio fisico ,embora os dados não circulem de fato nos nós,portanto se um computador estiver tentando escrever para outros computadores e os dados enviandos podem acabar colindo um no outro interropendo a conexã. </p>
- <h2><b>Beneficios</b></h2>
+<h1> Topologia de Rede</h1> 
+<h2>Introdução</h2>
+<p>A topoloia é um sistema que demonstra como os hosts estão conectados a rede, destacando a estrutura da rede, e é mostrado tanto fisicamente ou logicamente.Existe dois tipos de topologia de rede, a logica e a fisica.<br>A topologia Fisica mostra como os hosts estão dispostos e conectados no ambiente fisco. Seguindo um Layout Fisico como a posição de cada host, a forma que os cabos estão conectados, nos mostrando toda a topologia de rede, que o objetivo é auxiliar em varios pontos critics, como a maleabilidade, velocidade na transferencia dos dados e segurança.<br>A topologia logica é um pouco diferente, ela demonstra a forma como os daods são transmitidos na rede, ou a forma que os dados passam de um host para outro, sem se preocupar com a conexão fisica dos hosts, a forma como os dados são transmitidos na rede podem ser controladas por switches e roteadores</p>
+   <h2>Barramento</h2>
+<p>Os hosts estão conectados no mesmo meio fisico ,embora os dados não circulem de fato nos nós,portanto se um computador estiver tentando escrever para outros computadores e os dados enviandos podem acabar colindo um no outro interropendo a conexã.</p>
+<img class="img1"> src="o.jpg">
+ <h2>Beneficios</h2>
 <ul>
     <li>Utilizam-se poucos cabos.</li>
     <li>sua instalaçao é simples,seus meios fisicos sao economicamente barato.</li>
@@ -29,7 +35,6 @@
   <li>Problemas são dificeis de isolar.</li>
   <li>Caso ocorra um problema, o mesmo é dificil de identificar e isolar.</li>
   <li>Se por algum motivo houver uma falha no cabo de rede, a rede da sua empresa nao ira funcionar.</li>
-
 </ul>
 
 <h2>Estrela</h2>
@@ -69,6 +74,36 @@
 </ul>
 <h2>Desvantagens</h2>
 <p>Alto custo de implantação.</p>
+<h1>IPV4,Mascara de rede e Gateway</h1>
+<h2>Introdução</h1>
+<P>Para obter a comunicação entre os hosts,eu preciso da sua parte fisica e tambem logica,sem os dois fatores juntos nao é possivel a comunicação entre as redes</p>
+<h2>O que é ipv4</h2>
+<p>O protocolo ipv4 permite que os hots trafeguem na internet,todos que estiverem online teram um codigo 99.48.224.242. por exemplo,que permite enviar e receber informaçoes de outros hosts que estao conectados na rede</P>
+<p>Estes endereços IP, é formado por 04 blocos de 8 bits,estes são exibidos por numeros de 0 a 255.<br>Os endereços que iniciam com 192.168,com 10 ou com 172.16 ate 172.31,estes sao poupados para as redes locais ,portanto nao sao utilizados na internet<br>o IPV4 transfere endereços de produtos de 32 bits.sustenta mais ou menos 4,29 bilhões de IPs no mundo todo,o que nos tirou alcançar nossa crise atual: o sistema nao suporta mais endereços que isto</p>
+<img src="ipv4.jpg">
+<h2>O que é mascara de rede?</h2>
+<p>Vamos imaginar que a mascara de rede é um bairro no qual possui varias residencias(IPs).Os IPs que utilizam uma determinada classe,pertence aquela classe da mesma forma que se uma residencia (IP),esta presente no bairro(mascara de rede)pertence a mesma,sendo que cada IP corresponde a uma mascara de rede<br>OBS:Os IPs possuem 4 octetos de binarios que totalizam 32 bits</p>
+<img src="mascara.png"</img>
+<ul>
+ <li>CLasse A:10.0.0.0 ate 10.225.225.255(255.0.0)-utiliza apenas o primeiro octeto do IP que fica exclusivo para a mascara de rede e o restante para os hosts</li>
+ <li>Classe B:172.16.0.0 até 172.31.255.255(255.255.0.0)utiliza  os dois primeiros octeto do IP para a mascara de rede e  o restante para os hots</li>
+ <li>Classe C:192.168.0.0 ate 192.168.0.0 utiliza  os tres primeiros octeto do IP para a mascara de rede e  o restante para os hots</li>
+</ul>
+<h2>O que é gateway?</h2>
+<P>O Gateway em geral é um host ou dispositivo de rede no qual se depara com duas redes.podemos traduzir o gateway como porta ou portão,ela é uma porta que libera o acesso ou nao as outras redes,libera a passagem dos dados entre os hosts,no qual pode se instalar politicas de acesso para verificar a segurança dos daods.<br>È como se fosse um portal para liberar acesso da internet ele isola e domestica a rede.<br>Caso eu tenha 4 computadores e nao queira um modem para compartilhar a internet o gateway faz esse serviço para dar acesso a todos os 4 computadores</p>
+<div>
+<p>Exemplo:<br>Computador A:<br>IP:192.168.1.100<br>Mascara de rede:255.255.255.0<br>Gateway:192.168.1.1</p>
+<p>Computador B:<br>IP:192.168.1.158<br>Mascara de rede:255.255.255.0<br>gateway:192.168.1.1</p>
+<p>Computador C:<br>IP:192.168.1.200<br>Mascara de rede:255.255.255.0<br>gateway:192.168.1.1</p>
+<p>Computador D:<br>IP:192.168.1.200<br>Mascara de rede:255.255.255.0<br>gateway:192.168.1.1</p>
+<h2>Configurando um cliente na rede</h2>
+<p>Existem duas formas para configurar um cliente na rede ,o dinâmico onde so insere o cabo de rede e o protocolo DHCP inclui todas as informaçoes como IP,Gateway,DNS e mascara de rede, e a outra forma é estatico onde voce entra em (painel de controle-redes de internet-central de compartilhamento de rede-alterar as configuraçoes do adaptador--botão direito do mouse em cima do icone do adaptador-propriedade-protocolo TCP/IPCV4),chegando aqui voce inseri manualmente as informaçoes manualmente necessarias para se conectar na rede</p>
+<img src="estatico.webp"><img src="dinamico.png">
+
+
+
+
+
 
 
 </body>
